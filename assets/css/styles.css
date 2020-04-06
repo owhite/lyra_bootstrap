@@ -78,3 +78,7 @@ panel-heading {
   display: inline-block;
 }
 
+.collapse:not(.show) {
+  display: none;
+}
+

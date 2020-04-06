@@ -11,3 +11,14 @@ $('#return-to-top').click(function() {      // When arrow is clicked
         scrollTop : 0                       // Scroll to top of body
     }, 500);
 });
+// THIS KILLS THE COLLAPSE OF THE ACCORDIAN.
+// TEXT FOR EACH COLUMN WILL STAY LOADED
+$('[data-toggle="collapse"]').on('click',function(e){
+    if ( $(this).parents('.accordion').find('.collapse.show') ){
+        var idx = $(this).index('[data-toggle="collapse"]');
+        if (idx == $('.collapse.show').index('.collapse')) {
+            // prevent collapse
+            e.stopPropagation();
+        }
+    }
+});
